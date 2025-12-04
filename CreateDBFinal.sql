@@ -1,0 +1,9 @@
+IF DB_ID ('RDFinal') IS NOT NULL
+DROP DATABASE RDFinal
+GO
+
+CREATE DATABASE RDFinal
+
+
+
+
