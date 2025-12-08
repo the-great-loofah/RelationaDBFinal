@@ -4,7 +4,7 @@ GO
 CREATE TABLE Location (
 	LocationId INT IDENTITY(1,1) PRIMARY KEY,
 	LocationType VARCHAR(255),
-	Address VARCHAR(255)
+	Address VARCHAR(255) DEFAULT NULL
 )
 
 CREATE TABLE Role (
@@ -60,7 +60,7 @@ CREATE TABLE SavingsAccount (
 	Balance MONEY DEFAULT 0.00,
 	LastAccess DATE,
 	DateOpened DATE,
-	InterestRate FLOAT 
+	InterestRate FLOAT
 )
 
 CREATE TABLE LoanAccount (
@@ -99,8 +99,8 @@ CREATE TABLE CustomerLoanAccount (
 
 --==================================================================================
 
-ALTER TABLE Employee --updates the foreign key constraint for branchid in the employee table
-	ADD FOREIGN KEY (BranchId) REFERENCES EmployeeLocation (LocationId);
+--ALTER TABLE Employee --updates the foreign key constraint for branchid in the employee table
+	--ADD FOREIGN KEY (BranchId) REFERENCES EmployeeLocation (LocationId);
 
 
 
